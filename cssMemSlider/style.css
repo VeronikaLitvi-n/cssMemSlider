@@ -1,0 +1,189 @@
+html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, font, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td {
+ margin: 0; /* нулевая граница */
+ padding: 0; /* нулевые отступы */
+ border: 0; /* больше всего для картинок в IE6 */
+ outline: 0; /* точечная граница вокруг ссылок в Firefox */
+ font-size: 100%;
+ vertical-align: baseline;
+ background: transparent;
+ }
+ body {
+ line-height: 1;
+ }
+ ol, ul {
+ list-style: none; /* маркеры без кружочков */
+ }
+ blockquote, q {
+ quotes: none;
+ }
+ blockquote:before, blockquote:after,
+ q:before, q:after {
+ content: '';
+ content: none;
+ }
+ :focus {
+ outline: 0; /* Firefox выделяет рамкой из точек все ссылки при нажатии */
+ }
+ ins {
+ text-decoration: none;
+ }
+ del {
+ text-decoration: line-through;
+ }
+ table {
+ border-collapse: collapse; /* cellspacing="0" */
+ border-spacing: 0;
+ }
+
+
+.wrapper {
+    width: 70vw;
+    height: 60rem;
+    background-color: rgb(131, 170, 141);
+    margin: 0 auto;
+}
+
+
+.slider-holder {
+    width: 74%;
+    height: 49rem;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+       
+.image-holder {
+    width: 450%;
+    background-color: rgb(131, 170, 141);
+    height: 50rem;
+    clear: both;
+    position: relative;            
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+    transition: left 2s;
+}
+       
+.slider-image {
+    width:1000px;
+    padding-top: 30px;
+    float: left;
+    margin: 0px;
+    position: relative;
+    
+}
+
+#slider-image-1:target ~ .image-holder {
+    left: 0px;
+}
+       
+#slider-image-2:target ~ .image-holder{
+    left: -1000px;
+}
+       
+#slider-image-3:target ~ .image-holder {
+    left: -2000px;
+}
+#slider-image-4:target ~ .image-holder {
+    left: -3000px;
+}
+       
+.button-holder {
+    position: relative;
+    top: 20px;
+    padding-right: 175px;
+    text-align: right;
+}
+       
+.slider-change {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    border: 3px solid rgb(2, 116, 2);
+    border-radius: 50%;
+    margin-left: 10px;
+    background-color: rgb(126, 124, 124);
+}
+
+.slider-change:hover{
+    background-color: rgb(228, 228, 228);
+}
+
+.slider-change:active{
+    background-color: rgb(63, 82, 63);
+}
+
+.text_wrapper {
+    width: 24rem;
+    overflow: hidden;
+}
+
+.image_text_container {
+    width: 400%;
+    height: 6rem;
+    margin-left: 175px;
+    overflow: hidden;
+}
+
+.image_descr {    
+    display: inline-block;
+    font-size: 3em;
+}
+
+@media (max-width: 320px) {
+    .wrapper{
+        width: 100vw;
+    }
+    .slider-holder {
+        height: 15rem;
+    }
+    .image-holder {
+        width: 600%;
+        
+    }
+    .slider-image {
+        width:250px;
+    }
+    #slider-image-1:target ~ .image-holder {
+        left: 0px;
+    }
+           
+    #slider-image-2:target ~ .image-holder{
+        left: -250px;
+    }
+           
+    #slider-image-3:target ~ .image-holder {
+        left: -500px;
+    }
+    #slider-image-4:target ~ .image-holder {
+        left: -750px;
+    }
+
+    .slider-change {
+        height: 1.0em;
+        width: 1.0em;
+        border: 1px solid rgb(2, 116, 2);
+    }
+    .button-holder {
+       text-align: center;
+       padding-right: 0px;
+    } 
+    .text_wrapper {
+        width: 10rem;
+    }
+    .image_text_container {
+        margin-left: 45px;
+    }
+    .image_descr {    
+        font-size: 2em;
+    }
+
+}
