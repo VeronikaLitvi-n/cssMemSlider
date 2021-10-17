@@ -171,17 +171,21 @@ html, body, div, span, applet, object, iframe,
     .wrapper{
         width: 100vw;
     }
+    
     .slider-holder {
         height: 16rem;
     }
+
     .image-holder {
         width: 600%;
         
     }
+
     .slider-image {
         height:16rem;
         width:17.5%;
     }
+
     #slider-image-1:target ~ .image-holder,
     #slider-image-1:target ~ .text_wrapper .image_text_container {
         left: 0%;
@@ -190,18 +194,23 @@ html, body, div, span, applet, object, iframe,
     #slider-image-2:target ~ .image-holder{
         left: -10%;
     }
+
     #slider-image-2:target ~ .text_wrapper .image_text_container{
         left: -125%;
-    }       
+    }  
+
     #slider-image-3:target ~ .image-holder {
         left: -20%;
     }
+
     #slider-image-3:target ~ .text_wrapper .image_text_container{
         left: -243%;
-    }  
+    } 
+
     #slider-image-4:target ~ .image-holder{
         left: -30%;
     }
+
     #slider-image-4:target ~ .text_wrapper .image_text_container{
         left: -363%;
     }  
@@ -229,5 +238,4 @@ html, body, div, span, applet, object, iframe,
         font-size: 1.5em;
         padding-left: 3.5rem;
     }
-
 }
