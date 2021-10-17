@@ -76,9 +76,8 @@ html, body, div, span, applet, object, iframe,
 .slider-image {
     width:23%;
     height: 50rem;
-    padding-top: 30px;
+    padding-top: 2em;
     float: left;
-    margin: 0px;
     position: relative;
     
 }
@@ -89,7 +88,7 @@ html, body, div, span, applet, object, iframe,
 
 #slider-image-1:target ~ .slider-holder .image-holder,
 #slider-image-1:target ~ .text_wrapper .image_text_container{
-    left: 0px;
+    left: 0%;
 }
    
 #slider-image-2:target ~ .slider-holder  .image-holder,
@@ -109,8 +108,8 @@ html, body, div, span, applet, object, iframe,
        
 .button-holder {
     position: relative;
-    top: 20px;
-    padding-right: 175px;
+    top: 1.25em;
+    padding-right: 14em;
     text-align: right;
 }
        
@@ -118,7 +117,7 @@ html, body, div, span, applet, object, iframe,
     display: inline-block;
     height: 1.0em;
     width: 1.0em;
-    border: 3px solid rgb(2, 116, 2);
+    border: 0.2em solid rgb(2, 116, 2);
     border-radius: 50%;
     background-color: rgb(126, 124, 124);
 }
@@ -129,16 +128,18 @@ html, body, div, span, applet, object, iframe,
 
 
 .area_dots {
-    border: 15px solid rgba(2, 116, 2, 0);
+    border: 1em solid rgba(2, 116, 2, 0);
     border-radius: 50%;
 }
 
 .area_dots:hover .slider-change {
     background-color: rgb(228, 228, 228);
 }
-
+.area_dots:active .slider-change{
+    background-color: chartreuse;
+}
 .text_wrapper {
-    margin-top: -30px;
+    margin-top: -2.5rem;
     width: 50%;
     overflow: hidden;
     
@@ -146,8 +147,7 @@ html, body, div, span, applet, object, iframe,
  .image_text_container {
     width: 650%;
     background-color: rgb(131, 170, 141);
-    height: 5rem;
-    
+    height: 5rem;    
     clear: both;
     position: relative;            
     -webkit-transition: left 2s;
@@ -158,7 +158,7 @@ html, body, div, span, applet, object, iframe,
 }
 
 .image_descr { 
-    padding-left: 180px;  
+    padding-left: 15rem;  
     position: relative;
     white-space: nowrap;    
     float: left;
@@ -172,29 +172,39 @@ html, body, div, span, applet, object, iframe,
         width: 100vw;
     }
     .slider-holder {
-        height: 15rem;
+        height: 16rem;
     }
     .image-holder {
         width: 600%;
         
     }
     .slider-image {
-        width:250px;
+        height:16rem;
+        width:17.5%;
     }
-    #slider-image-1:target ~ .image-holder {
-        left: 0px;
+    #slider-image-1:target ~ .image-holder,
+    #slider-image-1:target ~ .text_wrapper .image_text_container {
+        left: 0%;
     }
            
     #slider-image-2:target ~ .image-holder{
-        left: -250px;
+        left: -10%;
     }
-           
+    #slider-image-2:target ~ .text_wrapper .image_text_container{
+        left: -125%;
+    }       
     #slider-image-3:target ~ .image-holder {
-        left: -500px;
+        left: -20%;
     }
-    #slider-image-4:target ~ .image-holder {
-        left: -750px;
+    #slider-image-3:target ~ .text_wrapper .image_text_container{
+        left: -243%;
+    }  
+    #slider-image-4:target ~ .image-holder{
+        left: -30%;
     }
+    #slider-image-4:target ~ .text_wrapper .image_text_container{
+        left: -363%;
+    }  
 
     .slider-change {
         height: 1.0em;
@@ -203,16 +213,21 @@ html, body, div, span, applet, object, iframe,
     }
     .button-holder {
        text-align: center;
-       padding-right: 0px;
+       padding-right: 1.25rem;
     } 
     .text_wrapper {
-        width: 10rem;
+        margin-top: 0;
+        width: 100%;
+        overflow: hidden;
     }
     .image_text_container {
-        margin-left: 45px;
+        width: 900%;
+        height: 10rem;
+        overflow-wrap:break-word 
     }
     .image_descr {    
-        font-size: 2em;
+        font-size: 1.5em;
+        padding-left: 3.5rem;
     }
 
 }
