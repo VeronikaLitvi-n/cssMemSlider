@@ -1,0 +1,241 @@
+html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, font, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td {
+ margin: 0; /* нулевая граница */
+ padding: 0; /* нулевые отступы */
+ border: 0; /* больше всего для картинок в IE6 */
+ outline: 0; /* точечная граница вокруг ссылок в Firefox */
+ font-size: 100%;
+ vertical-align: baseline;
+ background: transparent;
+ }
+ body {
+ line-height: 1;
+ }
+ ol, ul {
+ list-style: none; /* маркеры без кружочков */
+ }
+ blockquote, q {
+ quotes: none;
+ }
+ blockquote:before, blockquote:after,
+ q:before, q:after {
+ content: '';
+ content: none;
+ }
+ :focus {
+ outline: 0; /* Firefox выделяет рамкой из точек все ссылки при нажатии */
+ }
+ ins {
+ text-decoration: none;
+ }
+ del {
+ text-decoration: line-through;
+ }
+ table {
+ border-collapse: collapse; /* cellspacing="0" */
+ border-spacing: 0;
+ }
+
+
+
+.wrapper {
+    width: 70vw;
+    height: 70rem;
+    background-color: rgb(131, 170, 141);
+    margin: 0 auto;
+}
+
+
+.slider-holder {
+    width: 74%;
+    height: 55rem;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+       
+.image-holder {
+    width: 450%;
+    background-color: rgb(131, 170, 141);
+    height: 51rem;
+    clear: both;
+    position: relative;            
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+    transition: left 2s;
+}
+       
+.slider-image {
+    width:23%;
+    height: 50rem;
+    padding-top: 2em;
+    float: left;
+    position: relative;
+    
+}
+
+.image_descr {
+    width: 12%;
+}
+
+#slider-image-1:target ~ .slider-holder .image-holder,
+#slider-image-1:target ~ .text_wrapper .image_text_container{
+    left: 0%;
+}
+   
+#slider-image-2:target ~ .slider-holder  .image-holder,
+#slider-image-2:target ~ .text_wrapper .image_text_container {
+    left: -105%;
+}
+    
+#slider-image-3:target ~ .slider-holder  .image-holder,
+#slider-image-3:target ~ .text_wrapper .image_text_container {
+    left: -210%;
+}
+
+#slider-image-4:target ~ .slider-holder  .image-holder,
+#slider-image-4:target ~ .text_wrapper .image_text_container {
+    left: -315%;
+}
+       
+.button-holder {
+    position: relative;
+    top: 1.25em;
+    padding-right: 14em;
+    text-align: right;
+}
+       
+.slider-change {
+    display: inline-block;
+    height: 1.0em;
+    width: 1.0em;
+    border: 0.2em solid rgb(2, 116, 2);
+    border-radius: 50%;
+    background-color: rgb(126, 124, 124);
+}
+
+.slider-change:hover{
+    background-color: rgb(228, 228, 228);
+}
+
+
+.area_dots {
+    border: 1em solid rgba(2, 116, 2, 0);
+    border-radius: 50%;
+}
+
+.area_dots:hover .slider-change {
+    background-color: rgb(228, 228, 228);
+}
+.area_dots:active .slider-change{
+    background-color: chartreuse;
+}
+.text_wrapper {
+    margin-top: -2.5rem;
+    width: 50%;
+    overflow: hidden;
+    
+} 
+ .image_text_container {
+    width: 650%;
+    background-color: rgb(131, 170, 141);
+    height: 5rem;    
+    clear: both;
+    position: relative;            
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+    transition: left 2s;
+
+}
+
+.image_descr { 
+    padding-left: 15rem;  
+    position: relative;
+    white-space: nowrap;    
+    float: left;
+    font-size: 2em;
+    color: black;
+}
+
+
+@media (max-width: 320px) {
+    .wrapper{
+        width: 100vw;
+    }
+    
+    .slider-holder {
+        height: 16rem;
+    }
+
+    .image-holder {
+        width: 600%;
+        
+    }
+
+    .slider-image {
+        height:16rem;
+        width:17.5%;
+    }
+
+    #slider-image-1:target ~ .image-holder,
+    #slider-image-1:target ~ .text_wrapper .image_text_container {
+        left: 0%;
+    }
+           
+    #slider-image-2:target ~ .image-holder{
+        left: -10%;
+    }
+
+    #slider-image-2:target ~ .text_wrapper .image_text_container{
+        left: -125%;
+    }  
+
+    #slider-image-3:target ~ .image-holder {
+        left: -20%;
+    }
+
+    #slider-image-3:target ~ .text_wrapper .image_text_container{
+        left: -243%;
+    } 
+
+    #slider-image-4:target ~ .image-holder{
+        left: -30%;
+    }
+
+    #slider-image-4:target ~ .text_wrapper .image_text_container{
+        left: -363%;
+    }  
+
+    .slider-change {
+        height: 1.0em;
+        width: 1.0em;
+        border: 1px solid rgb(2, 116, 2);
+    }
+    .button-holder {
+       text-align: center;
+       padding-right: 1.25rem;
+    } 
+    .text_wrapper {
+        margin-top: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+    .image_text_container {
+        width: 900%;
+        height: 10rem;
+        overflow-wrap:break-word 
+    }
+    .image_descr {    
+        font-size: 1.5em;
+        padding-left: 3.5rem;
+    }
+}
