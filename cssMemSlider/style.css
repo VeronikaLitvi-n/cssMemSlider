@@ -44,9 +44,10 @@ html, body, div, span, applet, object, iframe,
  }
 
 
+
 .wrapper {
     width: 70vw;
-    height: 60rem;
+    height: 70rem;
     background-color: rgb(131, 170, 141);
     margin: 0 auto;
 }
@@ -54,7 +55,7 @@ html, body, div, span, applet, object, iframe,
 
 .slider-holder {
     width: 74%;
-    height: 49rem;
+    height: 55rem;
     margin: 0 auto;
     text-align: center;
     overflow: hidden;
@@ -63,7 +64,7 @@ html, body, div, span, applet, object, iframe,
 .image-holder {
     width: 450%;
     background-color: rgb(131, 170, 141);
-    height: 50rem;
+    height: 51rem;
     clear: both;
     position: relative;            
     -webkit-transition: left 2s;
@@ -73,7 +74,8 @@ html, body, div, span, applet, object, iframe,
 }
        
 .slider-image {
-    width:1000px;
+    width:23%;
+    height: 50rem;
     padding-top: 30px;
     float: left;
     margin: 0px;
@@ -81,19 +83,28 @@ html, body, div, span, applet, object, iframe,
     
 }
 
-#slider-image-1:target ~ .image-holder {
+.image_descr {
+    width: 12%;
+}
+
+#slider-image-1:target ~ .slider-holder .image-holder,
+#slider-image-1:target ~ .text_wrapper .image_text_container{
     left: 0px;
 }
-       
-#slider-image-2:target ~ .image-holder{
-    left: -1000px;
+   
+#slider-image-2:target ~ .slider-holder  .image-holder,
+#slider-image-2:target ~ .text_wrapper .image_text_container {
+    left: -105%;
 }
-       
-#slider-image-3:target ~ .image-holder {
-    left: -2000px;
+    
+#slider-image-3:target ~ .slider-holder  .image-holder,
+#slider-image-3:target ~ .text_wrapper .image_text_container {
+    left: -210%;
 }
-#slider-image-4:target ~ .image-holder {
-    left: -3000px;
+
+#slider-image-4:target ~ .slider-holder  .image-holder,
+#slider-image-4:target ~ .text_wrapper .image_text_container {
+    left: -315%;
 }
        
 .button-holder {
@@ -105,11 +116,10 @@ html, body, div, span, applet, object, iframe,
        
 .slider-change {
     display: inline-block;
-    height: 1em;
-    width: 1em;
+    height: 1.0em;
+    width: 1.0em;
     border: 3px solid rgb(2, 116, 2);
     border-radius: 50%;
-    margin-left: 10px;
     background-color: rgb(126, 124, 124);
 }
 
@@ -117,26 +127,45 @@ html, body, div, span, applet, object, iframe,
     background-color: rgb(228, 228, 228);
 }
 
-.slider-change:active{
-    background-color: rgb(63, 82, 63);
+
+.area_dots {
+    border: 15px solid rgba(2, 116, 2, 0);
+    border-radius: 50%;
+}
+
+.area_dots:hover .slider-change {
+    background-color: rgb(228, 228, 228);
 }
 
 .text_wrapper {
-    width: 24rem;
+    margin-top: -30px;
+    width: 50%;
     overflow: hidden;
+    
+} 
+ .image_text_container {
+    width: 650%;
+    background-color: rgb(131, 170, 141);
+    height: 5rem;
+    
+    clear: both;
+    position: relative;            
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+    transition: left 2s;
+
 }
 
-.image_text_container {
-    width: 400%;
-    height: 6rem;
-    margin-left: 175px;
-    overflow: hidden;
+.image_descr { 
+    padding-left: 180px;  
+    position: relative;
+    white-space: nowrap;    
+    float: left;
+    font-size: 2em;
+    color: black;
 }
 
-.image_descr {    
-    display: inline-block;
-    font-size: 3em;
-}
 
 @media (max-width: 320px) {
     .wrapper{
